@@ -1,8 +1,10 @@
 var assert = require("assert");
-const modulo = require("../src/modulo.js");
+const modulo = require("../src/modulo2.js");
+const lista = require("../src/lista.js");
 
-describe("Meus testes ok", () => {
-  it("Verificar a quantidade de itens da lista", () => {
-    console.log(modulo.listaDeBruxos[0]);
+describe("Test Suite", () => {
+  it.only("A quantidade de bruxinhos(as) é equivalente a 5?", () => {
+    let result = modulo(lista);
+    assert.equal(result, 5);
   });
 });
