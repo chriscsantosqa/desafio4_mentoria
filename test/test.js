@@ -6,5 +6,6 @@ describe("Test Suite", () => {
   it.only("A quantidade de bruxinhos(as) é equivalente a 5?", () => {
     let result = modulo(lista);
     assert.equal(result, 5);
+    console.log(lista[0].idade)
   });
 });
