@@ -1,5 +1,5 @@
 # Mentoria em Testes de Software - Convite a Hogwarts
-  - [Grupo 20:](#grupo)
+  - [Grupo 20:](#grupo-20)
   - [Instalação](#instalação)
   - [Execução](#execução)
   
@@ -13,7 +13,7 @@
 🧙‍♀️Kamila DSG: [Linkedin](https://www.linkedin.com/in/kamiladsg/)<br>
 
 ## Instalação
-Durante o desafio foram utilizado 2 ferramentas:
+Durante o desafio foi utilizado 2 ferramentas:
 
 * [Mocha](https://mochajs.org/) version: 10.2.0
 ```
@@ -29,7 +29,7 @@ $ npm install sinon
 * Pra executar o projeto navegue até a pasta src e execute o comando node:
 ```
 $ cd ./src
-$ node index.js
+$ node hogwartsLetter.js
 ```
 * Pra executar os testes execute o comando a seguir no terminal:
 ```
