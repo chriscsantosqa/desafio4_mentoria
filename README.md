@@ -1,5 +1,7 @@
-# Desafio 4 - Convite a Hogwarts
-* [Instalação](#instalação)
+# Mentoria em Testes de Software - Convite a Hogwarts
+  - [Grupo:](#grupo)
+  - [Instalação](#instalação)
+  - [Execução](#execução)
 <p><img src="/src/img/carta.png" alt="carta de hogwarts" /></p>
 
 ## Grupo:
