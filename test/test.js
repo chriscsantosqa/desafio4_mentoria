@@ -1,11 +1,10 @@
 const assert = require("assert");
 const sinon = require('sinon');
-const modulo = require("../src/metodo.js");
-const lista = require("../src/lista.js");
+const modulo = require("../src/asserts/metodo.js");
+const lista = require("../src/list/lista.js");
 
 describe("Testes da lista de bruxos", () => {
   let consoleLogStub;
-  modulo.percorrerLista(lista);
 
   beforeEach(function () {
     consoleLogStub = sinon.stub(console, 'log');
@@ -20,7 +19,7 @@ describe("Testes da lista de bruxos", () => {
   });
 
   it('Verificar bruxo com idade negativa', () => {
-    const bruxo = { nome: 'Bruxo', idade: -1 };
+    const bruxo = { nome: 'Alvo Dumbledore', idade: -1 };
 
     modulo.percorrerLista([bruxo]);
 
