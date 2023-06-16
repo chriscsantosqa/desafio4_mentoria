@@ -1,7 +1,7 @@
 const assert = require("assert");
 const sinon = require('sinon');
-const modulo = require("../src/asserts/metodo.js");
-const lista = require("../src/asserts/list/lista.js");
+const modulo = require("../src/asserts/metodos/metodo.js");
+const lista = require("../src/asserts/pessoas/lista.js");
 
 describe("Testes da lista de bruxos", () => {
   let consoleLogStub;
