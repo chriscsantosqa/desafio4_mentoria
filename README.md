@@ -1,8 +1,10 @@
 # Mentoria em Testes de Software - Convite a Hogwarts
+- [Mentoria em Testes de Software - Convite a Hogwarts](#mentoria-em-testes-de-software---convite-a-hogwarts)
   - [Grupo:](#grupo)
   - [Instalação](#instalação)
   - [Execução](#execução)
-<p><img src="/src/img/carta.png" alt="carta de hogwarts" /></p>
+  
+<p><img src="../src/asserts/img/carta.png" alt="carta de hogwarts" /></p>
 
 ## Grupo:
 🧙‍♀️Bruna Accioly: [Linkedin](https://www.linkedin.com/in/bruna-cristina-silva-/)<br>
