@@ -28,4 +28,4 @@ module.exports = chapeuSeletor = {
     }
   }
 }
-const lista = require("../list/lista.js");
+const lista = require("./list/lista.js");

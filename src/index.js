@@ -1,5 +1,5 @@
 const modulo = require("./asserts/metodo.js");
-const lista = require("./list/lista.js");
+const lista = require("./asserts/list/lista.js");
 const chapeuSeletor = require("./asserts/chapeuSeletor.js");
 
 
