@@ -1,11 +1,11 @@
 # Mentoria em Testes de Software - Convite a Hogwarts
-  - [Grupo:](#grupo)
+  - [Grupo 20:](#grupo)
   - [Instalação](#instalação)
   - [Execução](#execução)
   
 <p><img src="/src/asserts/img/carta.png" alt="carta de hogwarts" /></p>
 
-## Grupo:
+## Grupo 20:
 🧙‍♀️Bruna Accioly: [Linkedin](https://www.linkedin.com/in/bruna-cristina-silva-/)<br>
 🧙‍♂️Christopher C. Santos: [Linkedin](https://www.linkedin.com/in/chriscsantosqa/)<br>
 🧙‍♀️Gabriela Barné: [Linkedin](https://www.linkedin.com/in/gabrielabarne/)<br>
