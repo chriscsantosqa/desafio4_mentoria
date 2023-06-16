@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "sinon": "^15.1.2"
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
