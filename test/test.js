@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const modulo = require("../src/metodo.js");
 const lista = require("../src/lista.js");
 
-describe("Test Suite", () => {
+describe("Testes da lista de bruxos", () => {
   let consoleLogStub;
   modulo.percorrerLista(lista);
 
@@ -17,6 +17,66 @@ describe("Test Suite", () => {
   it("Verificar se quantidade de bruxinhos(as) na lista é equivalente a 5", () => {
     let result = modulo.percorrerLista(lista);
     assert.equal(result, 5);
+  });
+
+  it('Verificar bruxo com idade negativa', () => {
+    const bruxo = { nome: 'Bruxo', idade: -1 };
+
+    modulo.percorrerLista([bruxo]);
+
+    assert.strictEqual(consoleLogStub.callCount, 2);
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Idade inválida!');
+    assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
+  });
+
+  it('Verificar bruxo com idade 0', () => {
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 0 };
+
+    modulo.percorrerLista([bruxo]);
+
+    assert.strictEqual(consoleLogStub.callCount, 2);
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Pequeno(a) Bruxinho(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
+  });
+
+  it('Verificar bruxo com idade 11', () => {
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 11 };
+
+    modulo.percorrerLista([bruxo]);
+
+    assert.strictEqual(consoleLogStub.callCount, 2);
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Pequeno(a) Bruxinho(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
+  });
+
+  it('Verificar bruxo com idade 12', () => {
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 12 };
+
+    modulo.percorrerLista([bruxo]);
+
+    assert.strictEqual(consoleLogStub.callCount, 2);
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
+  });
+
+  it('Verificar bruxo com idade 17', () => {
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 17 };
+
+    modulo.percorrerLista([bruxo]);
+
+    assert.strictEqual(consoleLogStub.callCount, 2);
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
+  });
+
+  it('Verificar bruxo com idade acima de 18', () => {
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 18 };
+
+    modulo.percorrerLista([bruxo]);
+
+    assert.strictEqual(consoleLogStub.callCount, 2);
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
   });
 
   it('Verificar a classificação correta dos bruxos de acordo com as idades', () => {

@@ -7,7 +7,7 @@ module.exports = {
           lifeFase = "Pequeno(a) Bruxinho(a)";
       } else if (typeof idade === "number" && idade >= 12 && idade < 18) {
         lifeFase = "Jovem Bruxo(a)";
-      } else if (typeof idade === "number" && idade > 18) {
+      } else if (typeof idade === "number" && idade >= 18) {
         lifeFase = "Bruxo(a)";
       } else {
         console.log("Idade inválida!");
