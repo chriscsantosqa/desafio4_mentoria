@@ -1,4 +1,5 @@
 # Desafio 4 - Convite a Hogwarts
+* [Instalação](#instalação)
 <p><img src="/src/img/carta.png" alt="carta de hogwarts" /></p>
 
 ## Grupo:
@@ -7,3 +8,27 @@
 🧙‍♀️Gabriela Barné: [Linkedin](https://www.linkedin.com/in/gabrielabarne/)<br>
 🧙‍♀️Ester de Sousa: [Linkedin](https://www.linkedin.com/in/ester-de-sousa-666265248/)<br>
 🧙‍♀️Kamila DSG: [Linkedin](https://www.linkedin.com/in/kamiladsg/)<br>
+
+## Instalação
+Durante o desafio foram utilizado 2 ferramentas:
+
+* [Mocha](https://mochajs.org/) version: 10.2.0
+```
+$ npm install mocha
+```
+
+* [Sinon](https://sinonjs.org/) version: 15.1.2
+```
+$ npm install sinon
+```
+
+## Execução
+* Pra executar o projeto navegue até a pasta src e execute o comando node:
+```
+$ cd ./src
+$ node index.js
+```
+* Pra executar os testes execute o comando a seguir no terminal:
+```
+$ npm test
+```
