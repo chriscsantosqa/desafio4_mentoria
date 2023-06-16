@@ -1,5 +1,4 @@
 # Mentoria em Testes de Software - Convite a Hogwarts
-- [Mentoria em Testes de Software - Convite a Hogwarts](#mentoria-em-testes-de-software---convite-a-hogwarts)
   - [Grupo:](#grupo)
   - [Instalação](#instalação)
   - [Execução](#execução)
