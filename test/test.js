@@ -29,52 +29,52 @@ describe("Testes da lista de bruxos", () => {
   });
 
   it('Verificar bruxo com idade 0', () => {
-    const bruxo = { nome: 'Alvo Dumbledore', idade: 0 };
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 0, email: 'alvodumbledore@hogwarts.com'};
 
     modulo.percorrerLista([bruxo]);
 
     assert.strictEqual(consoleLogStub.callCount, 2);
-    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Pequeno(a) Bruxinho(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Pequeno(a) Bruxinho(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email alvodumbledore@hogwarts.com !!');
     assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
   });
 
   it('Verificar bruxo com idade 11', () => {
-    const bruxo = { nome: 'Alvo Dumbledore', idade: 11 };
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 11, email: 'alvodumbledore@hogwarts.com' };
 
     modulo.percorrerLista([bruxo]);
 
     assert.strictEqual(consoleLogStub.callCount, 2);
-    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Pequeno(a) Bruxinho(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Pequeno(a) Bruxinho(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email alvodumbledore@hogwarts.com !!');
     assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
   });
 
   it('Verificar bruxo com idade 12', () => {
-    const bruxo = { nome: 'Alvo Dumbledore', idade: 12 };
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 12, email: 'alvodumbledore@hogwarts.com' };
 
     modulo.percorrerLista([bruxo]);
 
     assert.strictEqual(consoleLogStub.callCount, 2);
-    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email alvodumbledore@hogwarts.com !!');
     assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
   });
 
   it('Verificar bruxo com idade 17', () => {
-    const bruxo = { nome: 'Alvo Dumbledore', idade: 17 };
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 17, email: 'alvodumbledore@hogwarts.com' };
 
     modulo.percorrerLista([bruxo]);
 
     assert.strictEqual(consoleLogStub.callCount, 2);
-    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email alvodumbledore@hogwarts.com !!');
     assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
   });
 
   it('Verificar bruxo com idade acima de 18', () => {
-    const bruxo = { nome: 'Alvo Dumbledore', idade: 18 };
+    const bruxo = { nome: 'Alvo Dumbledore', idade: 18, email: 'alvodumbledore@hogwarts.com' };
 
     modulo.percorrerLista([bruxo]);
 
     assert.strictEqual(consoleLogStub.callCount, 2);
-    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Bruxo(a) Alvo Dumbledore, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email alvodumbledore@hogwarts.com !!');
     assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 1');
   });
 
@@ -82,11 +82,11 @@ describe("Testes da lista de bruxos", () => {
     modulo.percorrerLista(lista); //função é executada pra ter os retornos a serem testados abaixo
 
     assert.strictEqual(consoleLogStub.callCount, 6); // 5 mensagens de output + 1 mensagem de contagem
-    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Gabriela Mcgonagall, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
-    assert.strictEqual(consoleLogStub.getCall(1).args[0], 'Jovem Bruxo(a) Bruna Weasley, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
-    assert.strictEqual(consoleLogStub.getCall(2).args[0], 'Bruxo(a) Kamila Potter, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
-    assert.strictEqual(consoleLogStub.getCall(3).args[0], 'Bruxo(a) Christopher Hagrid, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
-    assert.strictEqual(consoleLogStub.getCall(4).args[0], 'Pequeno(a) Bruxinho(a) Ester Lovegood, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts');
+    assert.strictEqual(consoleLogStub.getCall(0).args[0], 'Jovem Bruxo(a) Gabriela Mcgonagall, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email gabimacgonagall@hogwarts.com !!');
+    assert.strictEqual(consoleLogStub.getCall(1).args[0], 'Jovem Bruxo(a) Bruna Weasley, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email bruhweasley@hogwarts.com !!');
+    assert.strictEqual(consoleLogStub.getCall(2).args[0], 'Bruxo(a) Kamila Potter, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email milapotter@hogwarts.com !!');
+    assert.strictEqual(consoleLogStub.getCall(3).args[0], 'Bruxo(a) Christopher Hagrid, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email chrishagrid@hogwarts.com !!');
+    assert.strictEqual(consoleLogStub.getCall(4).args[0], 'Pequeno(a) Bruxinho(a) Ester Lovegood, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email esterlovegood@hogwarts.com !!');
     assert.strictEqual(consoleLogStub.lastCall.args[0], '\nO número total de bruxos(as) listados(as) é: 5');
   });
 });
