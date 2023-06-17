@@ -2,7 +2,7 @@ module.exports = {
   percorrerLista(lista){
     lista.forEach((bruxo) => {
       let lifeFase;
-      const {nome, idade} = bruxo;
+      const {nome, idade, email} = bruxo;
       if (typeof idade === "number" && idade >= 0 && idade < 12) {
           lifeFase = "Pequeno(a) Bruxinho(a)";
       } else if (typeof idade === "number" && idade >= 12 && idade < 18) {
@@ -13,7 +13,7 @@ module.exports = {
         console.log("Idade inválida!");
         return;
       }
-      console.log(`${lifeFase} ${nome}, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts`);
+      console.log(`${lifeFase} ${nome}, você está sendo convocado(a) para a escola de magia e bruxaria de Hogwarts, cheque seu email ${email} !!`);
   
     });
     console.log(`\nO número total de bruxos(as) listados(as) é: ${lista.length}`);
